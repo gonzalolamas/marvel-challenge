@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+<h1>React Challenge Marvel</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="https://ph-files.imgix.net/628f8ed7-1c0b-4a9f-9e9f-d9b6d2431913.png?auto=format"/>
 
-## Available Scripts
+<h2>
+Funcionalidades incorporadas en la app 
+</h2>
 
-In the project directory, you can run:
+<ul>
 
-### `npm start`
+<li>Las peticiones se tienen que realizar a la siguiente URL:
+http://gateway.marvel.com/v1/</li>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+</ul>
 
-### `npm test`
+<h2>
+Funcionalidades que faltan:
+</h2>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<ul>
 
-### `npm run build`
+<li>El buscador tiene que tener la posibilidad de buscar los nombres de los Personajes de Marvel en el input y por URL.</li>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<li>Cuando se entra la primera vez en la app web sin ningún personaje en
+la URL tiene que mostrar un personaje aleatorio y así por cada vez
+que vuelva a recargar la página.</li>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<li>La búsqueda tiene que contemplar buscar por similitudes de texto y
+parecidos de nombre, es decir, con solo buscar “spider” debería de
+renderizar todas las posibilidades y matches que abarcan.</li>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<li>La búsqueda tiene que tener la posibilidad de buscar por comic
+directamente también y si es un link que viene directamente de la
+página de marvel(The Amazing Spider-Man #22) tiene que visualizar un
+preview del cómic.
+La manera que se mostrarán las búsquedas serán en forma de cards
+y modales para el detalle del personaje con sus comics.</li>
 
-### `npm run eject`
+<li>
+Al clickear un card debería ir al detalle del personaje y mostrar un
+listado de sus cómics ordenados por fecha.
+</li>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<li>
+El buscador de marvel tiene que contemplar que por la búsqueda de
+la URL se pueda hacer búsqueda de los personajes mediante query
+strings en la url del sitio, por ejemplo:
+http://my.app.com/?character=”spiderman”&comic=”The Amazing
+Spider-Man #22” y debe renderizar el card de Spiderman que al
+clickearse solo debe de aparecer el comic que fue buscado(este
+feature debe de soportar más de un cómic por URL, así como más de
+un personaje)
+</li>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<li>
+La búsqueda tiene que poder guardarse en un listado de favoritos y
+que persista en el browser para que pueda ser usada en un futuro solo
+dandole click a la lista de búsquedas favoritas el cual tiene la estrella
+en la esquina superior derecha del input de búsqueda.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</li>
+</ul>
