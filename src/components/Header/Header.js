@@ -1,12 +1,12 @@
 import React from 'react'
-import logo from '../assets/images/Marvel_Logo.svg'
+import logo from '../../assets/images/Logo.svg';
+import {HeaderMain} from './Header.style'
 
 const Header = () => {
     return (
-        <header className="center">
+        <HeaderMain>
             <img src={logo} alt="{logo}"/>
-            <i className="far fa-heart text-primary"></i>
-        </header>
+        </HeaderMain>
     )
 }
 

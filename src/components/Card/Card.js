@@ -1,30 +1,17 @@
 import React from "react";
+import {Content} from "./Card.style"
+import {ContentInner} from "./Card.style"
+import {ContentFront} from "./Card.style"
 
 const Card = ({ item }) => {
   return (
-    <div className="content">
-      <div className="content-inner">
-        <div className="content-front">
+    <Content className="content">
+      <ContentInner>
+        <ContentFront>
           <img src={item.thumbnail.path + "/portrait_xlarge.jpg"} alt="" />
-        </div>
-        <div className="content-back">
-          <h1>{item.name}</h1>
-          <ul>
-            <li>
-              <strong>Name:</strong> {item.name}
-            </li>
-            <li>
-              <strong>Description:</strong> {item.description}
-            </li>
-            <li>
-              <button type="button" onClick={() => (item)}>
-                Favorite
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+        </ContentFront>
+      </ContentInner>
+    </Content>
   );
 };
 

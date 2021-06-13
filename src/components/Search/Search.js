@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import {Container} from './Search.style'
+import {SearchChar} from './Search.style'
 
 const Search = ({search}) => {
     const[text,setText] = useState('')
@@ -9,7 +11,8 @@ const Search = ({search}) => {
     }
 
     return (
-        <section className="search">
+        <SearchChar>
+            <Container >
             <form>
                 <input type="text"
                 className="form-control"
@@ -18,7 +21,9 @@ const Search = ({search}) => {
                 onChange={(e)=>onSearch(e.target.value)}
                 value={text}/>
             </form>
-        </section>
+            <i className="fa fa-search text-primary"></i>
+            </Container>
+        </SearchChar>
     )
 }
 
