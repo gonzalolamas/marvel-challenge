@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import {useLocation} from 'react-router-dom'
+import queryString from 'query-string'
 import "../assets/css/App.css";
+import { getCharactersRandom } from '../api/charactersRandom'
+
 
 //components
 import Header from "../components/Header/Header";
@@ -13,36 +16,37 @@ const HomePage = () => {
     const [items, setItems] = useState([]);
     const [isLoading, setLoading] = useState(true);
     const [query, setQuery] = useState("");
+    //const [hero, setHero] = useState({});
+    const { search } = useLocation();
+    const val = queryString.parse(search)
   
     useEffect(() => {
-      const randomInt = Math.round(Math.random() * 1470);
-      const fetch = async () => {
-        if (query === "") {
-          const res = await axios(
-            `http://gateway.marvel.com/v1/public/characters?limit=8&offset=${randomInt}&ts=1&apikey=${process.env.REACT_APP_MARVEL_KEY}&hash=${process.env.REACT_APP_MARVEL_HASH}`
-          );
-          console.log(res.data.data.results);
-          setItems(res.data.data.results);
-          setLoading(false);
-        } else {
-          const result = await axios(
-            `http://gateway.marvel.com/v1/public/characters?nameStartsWith=${query}&ts=1&apikey=${process.env.REACT_APP_MARVEL_KEY}&hash=${process.env.REACT_APP_MARVEL_HASH}`
-          );
-          console.log(result.data.data.results);
-          setItems(result.data.data.results);
-          setLoading(false);
-        }
-      };
+      getChar(val.character);
+    }, [val.character]);
   
-      fetch();
+    useEffect(() => {
+      if (query) {
+        getChar(query);
+      } else {
+        getChar();
+      }
     }, [query]);
-
+  
+    const getChar = (c) =>
+		getCharactersRandom(c)
+			.then((characters) => {
+				setItems(characters);
+			})
+			.finally(() => {
+				setLoading(false);
+			}
+	);
 
   return (
     <div className="container">
       <Header />
-      <Search search={(t) => setQuery(t)} />
-      <Cards items={items} isLoading={isLoading} />
+      <Search search={(search) => setQuery(search)} />
+      <Cards items={items}  isLoading={isLoading}/>
       <Footer />
     </div>
   );
