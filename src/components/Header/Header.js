@@ -1,12 +1,15 @@
 import React from 'react'
-import logo from '../assets/images/Marvel_Logo.svg'
+import logo from '../../assets/images/Logo.svg';
+import {HeaderMain} from './Header.style'
+import {NavLink} from 'react-router-dom'
 
 const Header = () => {
     return (
-        <header className="center">
-            <img src={logo} alt="{logo}"/>
-            <i className="far fa-heart text-primary"></i>
-        </header>
+        <HeaderMain>
+            <NavLink to='/'>
+                <img src={logo} alt="{logo}"/>
+            </NavLink>
+        </HeaderMain>
     )
 }
 

@@ -1,24 +1,29 @@
 import React, {useState} from 'react'
+import {Container} from './Search.style'
+import {SearchChar} from './Search.style'
 
 const Search = ({search}) => {
     const[text,setText] = useState('')
 
-    const onSearch= (t)=>{
-        setText(t)
-        search(t)
+    const onSubmit= (e) =>{
+        e.preventDefault();
+        search(text)
     }
 
     return (
-        <section className="search">
-            <form>
+        <SearchChar>
+            <Container >
+            <form onSubmit={onSubmit}>
                 <input type="text"
                 className="form-control"
                 placeholder="Find a hero"
                 autoFocus
-                onChange={(e)=>onSearch(e.target.value)}
+                onChange={(e)=>setText(e.target.value)}
                 value={text}/>
             </form>
-        </section>
+            <i className="fa fa-search text-primary" onSubmit={onSubmit}></i>
+            </Container>
+        </SearchChar>
     )
 }
 
