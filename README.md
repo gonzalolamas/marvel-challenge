@@ -1,6 +1,6 @@
 <h1>React Challenge Marvel</h1>
 
-<img src="https://ph-files.imgix.net/628f8ed7-1c0b-4a9f-9e9f-d9b6d2431913.png?auto=format"/>
+<img src="./src/assets/images/preview-screenshoots-app.png"/>
 
 <h2>
 Funcionalidades incorporadas en la app 

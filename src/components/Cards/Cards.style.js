@@ -4,6 +4,9 @@ export const Contents = styled.section`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
 
   @media (max-width: 800px) {
     & {

@@ -15,7 +15,7 @@ export const Container = styled.section`
     font-size: 20px;
     border: 2px solid black;
     border-radius: 5px;
-    width: 100%;
+    width: auto;
     margin: auto;
   }
 `;
