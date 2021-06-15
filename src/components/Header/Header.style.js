@@ -7,6 +7,6 @@ export const HeaderMain = styled.section`
   justify-content: center;
 
   & img {
-  width: 200px;
-}
+    width: 200px;
+  }
 `;
