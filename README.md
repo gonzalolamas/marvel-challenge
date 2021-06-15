@@ -21,6 +21,8 @@ que vuelva a recargar la página.</li>
 parecidos de nombre, es decir, con solo buscar “spider” debería de
 renderizar todas las posibilidades y matches que abarcan.</li>
 
+<li>Diseño responsive</li>  
+  
 </ul>
 
 <h2>
