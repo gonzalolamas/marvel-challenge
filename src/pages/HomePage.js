@@ -43,12 +43,12 @@ const HomePage = () => {
 	);
 
   return (
-    <div className="container">
+    <>
       <Header />
       <Search search={(search) => setQuery(search)} />
-      <Cards items={items}  isLoading={isLoading}/>
+      <Cards items={items} isLoading={isLoading}/>
       <Footer />
-    </div>
+    </>
   );
 };
 

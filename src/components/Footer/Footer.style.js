@@ -7,6 +7,11 @@ export const Container = styled.section `
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ff0000;
+    background: #e62429;
     color: white;
+
+    & a{
+        text-decoration: none;
+        color: #202020;
+    }
 `;
