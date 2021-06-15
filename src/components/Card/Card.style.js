@@ -8,7 +8,7 @@ export const Content = styled.div`
   padding: 10px;
   border: 1px solid #c4d7fe;
   width: 100%;
-  margin: 20px;
+  margin: 10px;
 
   & img {
     width: 100%;
