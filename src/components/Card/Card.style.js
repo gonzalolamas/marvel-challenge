@@ -10,6 +10,18 @@ export const Content = styled.div`
   width: 100%;
   margin: 10px;
 
+  &.transition {
+    background: #e62429;
+    transition: width 2s, height 2s, margin 2s;
+    margin: 50px auto 0;
+  }
+
+  &.transition:hover {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
   & img {
     width: 100%;
     height: 300px;
