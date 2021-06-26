@@ -4,7 +4,7 @@ import { Contents } from "../Cards/Cards.style";
 
 const Cards = ({ items, isLoading }) => {
   return isLoading ? (
-    <i className="fa fa-loading d-flex align-items-center justify-content-center">
+    <i className="fas fa-spinner d-flex align-items-center justify-content-center text-primary">
       <h1>Loading</h1>
     </i>
   ) : (

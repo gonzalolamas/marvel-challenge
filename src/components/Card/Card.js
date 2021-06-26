@@ -2,13 +2,16 @@ import React from "react";
 import { Content } from "./Card.style";
 
 const Card = ({ item }) => {
+  const {url} = item.urls[0];
+  const {path} = item.thumbnail;
+  const {name} = item;
   return (
-    <Content>
-      <a rel="noopener noreferrer" href={item.urls[0].url} target="_blank">
-        <img src={item.thumbnail.path + "/portrait_xlarge.jpg"} alt={"item"} />
+    <Content className="transition">
+      <a rel="noopener noreferrer" href={url} target="_blank">
+        <img src={path + "/portrait_xlarge.jpg"} alt={name} />
       </a>
       <span>
-        {item.name}
+        {name}
       </span>
     </Content>
   );
